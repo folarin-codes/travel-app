@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  /* position: relative; */
 }
 
 .main {
@@ -124,6 +125,7 @@
     background: #111;
   }
   .logo img {
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 }
