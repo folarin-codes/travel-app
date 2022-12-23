@@ -7,6 +7,8 @@ import { Container } from "../component/Container"
 
 import Destinations from '../component/Destinations';
 
+import Subscribe from "../component/Subscribe";
+
 import { SearchBox } from '../component/Search';
 
 import { InputStack , StyledInput , MainStack } from "./Stays";
@@ -70,6 +72,8 @@ const CarRentals = () => {
                       
 
                   </MainStack>
+
+                  <Subscribe/>
 
 
                   

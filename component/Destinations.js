@@ -27,7 +27,8 @@ const Destinations = () => {
       return (
 
             <ImageContainer>
-                   <Stack>
+                  
+                  <Stack gap={'.5em'}>
                                     <Box>
                                           
                                           <Image placeholder='blur' height={1200} src={dest1} style={{borderRadius:'10px'}} >
@@ -42,20 +43,20 @@ const Destinations = () => {
 
                               </Stack>
 
-                              <Stack>
+                              <Stack gap={'.5em'}>
                                     <Box>
                                           <Image placeholder='blur' height={1200} src={dest2} style={{borderRadius:'10px'}} />
 
                                     </Box>
-
-                                    
+   
                                     <Typography component={'h4'} variant='h4'>Winter deal destinations in Europe</Typography>
 
                                     
                                     <Typography component={'p'} variant='p'>Find out which destinations abroad are cheaper compared to this past summer.</Typography>
                               </Stack>
 
-                              <Stack>
+                             <Stack gap={'.5em'}>
+                        
                                     <Box>
                                           <Image placeholder='blur' height={1200} src={dest3} style={{borderRadius:'10px'}}/>
 
@@ -67,7 +68,7 @@ const Destinations = () => {
                                     <Typography component={'p'} variant='p'>Experience somewhere new in North America this season without breaking the bank.</Typography>
                               </Stack>  
                               
-                              <Stack>
+                              <Stack gap={'.5em'}>
                                     <Box>
                                           <Image placeholder='blur' height={1200} src={dest4} style={{borderRadius:'10px'}}/>
 
@@ -79,8 +80,6 @@ const Destinations = () => {
                                     
                                     <Typography component={'p'} variant='p'>Discover our favourite tools to save money on travel and organize your trip.</Typography>
                               </Stack>
-                  
-
             </ImageContainer>
       )
 }

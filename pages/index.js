@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-// import { ThemeProvider } from '@mui/material'
+
+import Flights from './flights'
+
 
 import styles from '../styles/Home.module.css'
 
-
-
-// import { theme } from '../theme';
 
 export default function Home() {
   return (
@@ -19,7 +18,9 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
+      <Flights/>
 
+    
         
           </div>
           

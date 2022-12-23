@@ -8,6 +8,8 @@ import { Container } from "../component/Container"
 
 import Destinations from '../component/Destinations';
 
+import Subscribe from '../component/Subscribe';
+
 import { SearchBox } from '../component/Search';
 
 import { InputStack , StyledInput , MainStack } from "./Stays";
@@ -80,7 +82,7 @@ const Flights = () => {
                         
                         <Typography component={'h3'} variant='h3'>Your holiday travel guide</Typography>
 
-                        <Stack direction="row" justifyContent={'space-between'} gap='5em'>
+                        <Stack direction="row" justifyContent={'space-between'} gap='4em'>
                               <Typography>Going somewhere to celebrate this season? Whether you are going home or somewhere to roam, we have got the travel tools to get you to your destination.</Typography>
 
                               <RegularButton>See all</RegularButton>
@@ -88,12 +90,10 @@ const Flights = () => {
 
                         <Destinations/>
 
-                      
-
                   </MainStack>
 
+                  <Subscribe/>
 
-                  
 
             </Container>
             

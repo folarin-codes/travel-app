@@ -9,6 +9,8 @@ import { RegularButton } from '../component/Button';
 
 import { Container } from '../component/Container';
 
+import Subscribe from '../component/Subscribe';
+
 import { SearchBox } from '../component/Search';
 
 import Destinations from '../component/Destinations';
@@ -121,11 +123,8 @@ const Stays = () => {
 
                   </MainStack>
 
-                  <SubscribeBox>
-                        
-                        <Image></Image>
 
-                  </SubscribeBox>
+                  <Subscribe/>
                   
             </Container>
             

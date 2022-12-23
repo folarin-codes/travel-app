@@ -13,7 +13,7 @@ const StyledNavigation = styled(Stack)(({ theme }) => ({
       width: '15vw',
       position: 'fixed',
       // backgroundColor: 'grey'
-      borderRight:'1px solid grey',
+      borderRight:'1px solid #d9e2e8',
       height: "100vh",
       gap: '1em',
       justifyItems: 'center',
