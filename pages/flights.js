@@ -82,10 +82,10 @@ const Flights = () => {
                         
                         <Typography component={'h3'} variant='h3'>Your holiday travel guide</Typography>
 
-                        <Stack direction="row" justifyContent={'space-between'} gap='4em'>
+                        <Stack direction="row" justifyContent={'space-between'} gap='1em'>
                               <Typography>Going somewhere to celebrate this season? Whether you are going home or somewhere to roam, we have got the travel tools to get you to your destination.</Typography>
 
-                              <RegularButton>See all</RegularButton>
+                              <RegularButton sx={{marginLeft:'3em'}}>See all</RegularButton>
                         </Stack>
 
                         <Destinations/>

@@ -10,7 +10,7 @@ import { theme } from "../theme";
 const Layout = ({children}) => {
       return (
             <ThemeProvider theme={theme}>
-                  <div style={{position:'relative'}}>
+                  <div>
 
                         
                         <Navigation/>
@@ -21,7 +21,7 @@ const Layout = ({children}) => {
                               children
                         }
 
-                              {/* <Footer /> */}
+                              <Footer />
                   </div>
                   
 
