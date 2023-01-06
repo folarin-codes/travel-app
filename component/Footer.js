@@ -33,7 +33,11 @@ const LinkText = styled(Link)(({
       color:'white !important'
 }))
 
-const Footer = () => {
+const SecondaryLink  = styled(Link)(({
+      color:'#a0afba !important'
+}))
+
+const Footer = ({mainText , subText}) => {
       return (
             <FooterStack>
                   <MainStack>
@@ -93,21 +97,23 @@ const Footer = () => {
                   </Stack>
                   </MainStack>
 
-                  <Stack justifyContent={'center'}>
-                        <Stack flexDirection={'row'} gap='.5em'>
-                              <Link>Privacy</Link>
-                              <Link>Terms & Conditions</Link>
-                              <Link>Ad Choices</Link>
-                              <Typography>©2023 KAYAK</Typography>
+                  <Stack sx={{alignItems:"center" , gap:'.5em'}}>
+                        <Stack flexDirection={'row'} gap='1em'>
+                              
+                              <SecondaryLink>Privacy</SecondaryLink>
+
+                              <SecondaryLink>Terms & Conditions</SecondaryLink>
+                              <SecondaryLink>Ad Choices</SecondaryLink>
+                              <Typography  sx={{color:"#a0afba !important"}}>©2023 KAYAK</Typography>
 
                         </Stack>
 
-                        <Box>
-                              <Typography>Find train deals and discounts with KAYAK. KAYAK is a train fare tool that searches rail deal sites to help you find the train tickets that suit you best.</Typography>
+                  
+                        <Typography variant='h6' component='h6'  sx={{color:"#a0afba !important", textAlign:'center'}}>Find train deals and discounts with KAYAK. KAYAK is a train fare tool that searches rail deal sites to help you find the train tickets that suit you best.</Typography>
 
-                              <Typography>KAYAK also helps you find the right hotels for your needs.</Typography>
+                        <Typography variant='h6' component='h6' sx={{color:"#a0afba !important", textAlign:'center'}}>KAYAK also helps you find the right hotels for your needs.</Typography>
 
-                        </Box>
+                       
 
                   </Stack>
 

@@ -14,7 +14,7 @@ export const theme = createTheme({
             h1: {
                   fontSize: "40px",
                   fontWeight: '600',
-                  color:'#212a30'
+                  color:'#212a30 !important'
             },
             h2: {
                   fontSize:'32px',
@@ -36,6 +36,11 @@ export const theme = createTheme({
                   fontSize:'16px',
                   fontWeight:'600',
                   color:'#212a30 !important'
+            },
+            h6: {
+                  fontSize: '12px',
+                  
+
             }
 
       },

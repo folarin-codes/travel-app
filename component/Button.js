@@ -11,9 +11,8 @@ export const RegularButton = styled(Button)({
       padding: '.5em 1em',
       height: '30px',
       fontWeight: '500 !important',
-      // width:'7em',
-      
-      
+      // width: "10em",
+      boxSizing:"border-box",
       
       '&:hover': {
             cursor: 'pointer',

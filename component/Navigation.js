@@ -209,8 +209,8 @@ export const Navigation = () => {
                   </Stack>
 
                   <Stack flexDirection={'row'} gap="1em">
-                              <Link underline='false'>Business</Link>
-                              <Link  underline='false'>Trip</Link>
+                              <Link >Business</Link>
+                              <Link >Trip</Link>
                               <Divider orientation='vertical' />
                               <Image src={heart}/>
                               <RegularButton>Sign in</RegularButton>
