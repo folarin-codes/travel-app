@@ -64,7 +64,7 @@ const Footer = ({mainText , subText}) => {
                         <LinkText>Help/FAQ</LinkText>
                         
                         <LinkText>Press</LinkText>
-                        <LinkText>Affilaites</LinkText>
+                        <LinkText>Affiliates</LinkText>
                         <LinkText>Hotel Owners</LinkText>
                         <LinkText>Partners</LinkText>
                         <LinkText>Advertise with us</LinkText>
@@ -89,7 +89,7 @@ const Footer = ({mainText , subText}) => {
                   <LinkText>Help/FAQ</LinkText>
 
                   <LinkText>Press</LinkText>
-                  <LinkText>Affilaites</LinkText>
+                  <LinkText>Affiliates</LinkText>
                   <LinkText>Hotel Owners</LinkText>
                   <LinkText>Partners</LinkText>
                   <LinkText>Advertise with us</LinkText>
