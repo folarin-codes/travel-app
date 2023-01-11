@@ -4,6 +4,8 @@ import { Stack, Box, Typography } from '@mui/material';
 
 import styled from '@emotion/styled'
 
+import Slider from 'react-slick';
+
 
 import { RegularButton } from '../component/Button';
 
@@ -15,9 +17,20 @@ import { SearchBox } from '../component/Search';
 
 import Destinations from '../component/Destinations';
 
+import { NextArrow, PrevArrow } from '../component/Arrows';
+
 import search from '../images/search.svg';
 
 import hero from '../images/hero.jpeg';
+
+import hotel1 from '../images/hotel1.jpg';
+import hotel2 from '../images/hotel2.jpg';
+import hotel3 from '../images/hotel3.jpeg';
+import hotel4 from '../images/hotel4.jpg';
+import hotel5 from '../images/hotel5.jpg';
+import hotel6 from '../images/hotel6.jpg';
+import hotel7 from '../images/hotel7.jpg';
+import hotel8 from '../images/hotel8.jpg';
 
 
 export const StyledInput = styled('input')({
@@ -45,9 +58,6 @@ const ImageContainer = styled(Stack)(({ theme }) => ({
       
 }))
 
-
-
-
 export const InputStack = styled(Stack)(({ theme }) => ({
 
       display: 'flex',
@@ -58,13 +68,28 @@ export const InputStack = styled(Stack)(({ theme }) => ({
 }))
 
 
-const SubscribeBox = styled(Stack)(({ theme }) => ({
+const StaysContainer = styled(Stack)(({ theme }) => ({
+
+      flexDirection: "row",
+      flexWrap:'wrap'
 
       
 }))
 
 
+
+
 const Stays = () => {
+
+      const sliderSettings = {
+            dots: false,
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />
+      }
+
       return (
 
             <Container>
@@ -97,12 +122,40 @@ const Stays = () => {
                   <Stack>
                         <Stack direction={'row'} sx={{ justifyContent: 'space-between'}}>
                               <Box>
-                                    <Typography component={'h4'} variant='h4'>Stays in Lagos</Typography>
+                                    <Typography component={'h2'} variant='h2'>Stays in Lagos</Typography>
                                     <Typography component={'p'} variant='p'>Wed, Dec 7 - Thu, Dec 8</Typography>
                               </Box>
 
                               <RegularButton>See all</RegularButton>
                         </Stack>
+
+                        {/* <StaysContainer> */}
+                              
+                              <Slider {...sliderSettings}>
+
+                              <Box>
+                                    <Image src={hotel1} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box>
+
+                              <Box>
+                                    <Image src={hotel2} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel3} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel4} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel5} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel6} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel7} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                              </Box> <Box>
+                                    <Image src={hotel8} height="250px" width='250px' style={{borderRadius:"10px"}}/>
+                                    </Box>
+                                    
+                        </Slider>
+
+                        {/* </StaysContainer> */}
 
                   </Stack>
 

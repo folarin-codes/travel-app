@@ -1,4 +1,6 @@
-import { Stack , Typography , Link, Box} from "@mui/material";
+import Image from 'next/image';
+
+import { Stack, Typography, Link, Box } from "@mui/material";
 
 import styled from '@emotion/styled'
 
@@ -78,8 +80,10 @@ const Footer = ({mainText , subText}) => {
                   <LinkText>Airline Fees</LinkText>
                   <LinkText>Airlines</LinkText>
                   <LinkText>Low fare tips</LinkText>
-                  <LinkText>Badges & Certificates</LinkText>
-                        
+                              <LinkText>Badges & Certificates</LinkText>
+                              
+                              {/* <Image src={"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/c2/fa/f7/lagos-oriental-hotel.jpg?w={width}&h={height}&s=1"} height='100' width={'100'}/>
+                         */}
                   </Stack>
 
                   <Stack gap='.5em'>
