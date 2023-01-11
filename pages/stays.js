@@ -7,6 +7,13 @@ import styled from '@emotion/styled'
 import Slider from 'react-slick';
 
 
+import axios from 'axios';
+
+import { useQuery } from '@tanstack/react-query';
+
+import { getLocation } from '../hooks/userLocation';
+
+
 import { RegularButton } from '../component/Button';
 
 import { Container } from '../component/Container';
@@ -77,9 +84,50 @@ const StaysContainer = styled(Stack)(({ theme }) => ({
 }))
 
 
+// const getLocation = () => {
+
+//       return useQuery(['location'] ,  async () => {
+//                const response = await axios.get("http://ip-api.com/json")
+              
+//             //     console.log(response.data)
+      
+//                   return response;
+//                  } )
+// }
+
+// const { data } = getLocation()
+
 
 
 const Stays = () => {
+
+      // const {data} = useQuery(['location'], async () => {
+      //       const response = await axios.get("http://ip-api.com/json")
+        
+      //       // console.log(response.data.data)
+
+      //       return response;
+      //     })
+          
+      //     console.log(data.data.regionName)
+
+
+      // const getLocation = () => {
+
+      //       return useQuery(['location'] ,  async () => {
+      //                const response = await axios.get("http://ip-api.com/json")
+                    
+      //             //     console.log(response.data)
+            
+      //                   return response;
+      //                  } )
+      // }
+
+      const { data } = getLocation()
+      
+      console.log(data)
+
+      
 
       const sliderSettings = {
             dots: false,

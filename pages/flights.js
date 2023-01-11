@@ -1,11 +1,13 @@
 
 import Image from 'next/image';
 
-import {Box , Stack , Typography} from '@mui/material'
+import { useQuery } from '@tanstack/react-query';
+
+import { Box, Stack, Typography } from '@mui/material'
 
 import { Container } from "../component/Container"
 
-
+import { getLocation } from '../hooks/userLocation';
 import Destinations from '../component/Destinations';
 
 import Subscribe from '../component/Subscribe';
@@ -16,11 +18,19 @@ import { InputStack , StyledInput , MainStack } from "./Stays";
 
 
 import { RegularButton } from '../component/Button';
-
+ 
 
 import search from '../images/search.svg';
 
 const Flights = () => {
+
+      // const { data } = useQuery('location');
+
+      const {data} = getLocation()
+
+      console.log(data)
+
+      
 
       return (
 
