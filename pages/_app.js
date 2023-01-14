@@ -1,9 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-// import axios from 'axios';
+import { StoreProvider } from 'easy-peasy';
 
-// import { useQuery } from '@tanstack/react-query';
-
+import { store } from '../store/store';
 
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css"; 
@@ -21,16 +20,18 @@ function MyApp({ Component, pageProps }) {
 
   return (
 
-    <QueryClientProvider client={queryClient}>
-      
-    <Layout>
-      
-       <Component {...pageProps} />
+    <StoreProvider store={store}>
 
-      </Layout>
-      
-      
-    </QueryClientProvider>
+        <QueryClientProvider client={queryClient}>
+          
+          <Layout>
+                
+            <Component {...pageProps} />
+
+          </Layout>
+       </QueryClientProvider>
+          
+      </StoreProvider>
     
   )
 }

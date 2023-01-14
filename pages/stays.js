@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import { useStoreState  } from 'easy-peasy';
+
 import Image from 'next/image'
 
 import { Stack, Box, Typography } from '@mui/material';
@@ -7,12 +11,11 @@ import styled from '@emotion/styled'
 import Slider from 'react-slick';
 
 
-import axios from 'axios';
-
-import { useQuery } from '@tanstack/react-query';
-
 import { getLocation } from '../hooks/userLocation';
 
+import { hotelsNearby } from '../hooks/hoteslNearby';
+
+import { locationStore } from '../store/store';
 
 import { RegularButton } from '../component/Button';
 
@@ -79,55 +82,31 @@ const StaysContainer = styled(Stack)(({ theme }) => ({
 
       flexDirection: "row",
       flexWrap:'wrap'
-
       
 }))
 
 
-// const getLocation = () => {
-
-//       return useQuery(['location'] ,  async () => {
-//                const response = await axios.get("http://ip-api.com/json")
-              
-//             //     console.log(response.data)
-      
-//                   return response;
-//                  } )
-// }
-
-// const { data } = getLocation()
-
-
-
 const Stays = () => {
 
-      // const {data} = useQuery(['location'], async () => {
-      //       const response = await axios.get("http://ip-api.com/json")
-        
-      //       // console.log(response.data.data)
+      const userLocationArr = useStoreState((state) => state.userLocation);
+      
+      console.log( userLocationArr);
 
-      //       return response;
-      //     })
-          
-      //     console.log(data.data.regionName)
-
-
-      // const getLocation = () => {
-
-      //       return useQuery(['location'] ,  async () => {
-      //                const response = await axios.get("http://ip-api.com/json")
-                    
-      //             //     console.log(response.data)
+      if (userLocationArr) {
             
-      //                   return response;
-      //                  } )
+      console.log(userLocationArr);
+            
+      };
+
+      const locationArr = locationStore((state) => state.location);
+
+      console.log(locationArr)
+
+      // const { data } = hotelsNearby('lagos,Nigeria');
+
+      // if (data) {
+      //       console.log(data.data.data)
       // }
-
-      const { data } = getLocation()
-      
-      console.log(data)
-
-      
 
       const sliderSettings = {
             dots: false,

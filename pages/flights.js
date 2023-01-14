@@ -1,13 +1,20 @@
 
 import Image from 'next/image';
 
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
+
+
+import { useStoreActions } from 'easy-peasy';
+
+import { locationStore } from '../store/store';
 
 import { Box, Stack, Typography } from '@mui/material'
 
 import { Container } from "../component/Container"
 
 import { getLocation } from '../hooks/userLocation';
+
+
 import Destinations from '../component/Destinations';
 
 import Subscribe from '../component/Subscribe';
@@ -24,11 +31,28 @@ import search from '../images/search.svg';
 
 const Flights = () => {
 
-      // const { data } = useQuery('location');
 
-      const {data} = getLocation()
+      const getUserLocation = useStoreActions((actions) => actions.addUserLocation);
 
-      console.log(data)
+      const userLocation = locationStore((state)=> state.getUserLocation)
+
+
+      const { data } = getLocation();
+
+      if (data) {
+
+            //EASY-PEASY
+
+            getUserLocation([data.data.regionName, data.data.country]);
+
+            //ZUSTAND
+            userLocation([data.data.regionName, data.data.country]);
+
+            
+            console.log(data.data.regionName, data.data.country)
+      }
+
+
 
       
 

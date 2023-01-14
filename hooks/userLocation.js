@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import { useStoreActions } from 'easy-peasy';
+
 import { useQuery } from "@tanstack/react-query";
 
 export const getLocation = () => {
@@ -9,6 +11,10 @@ export const getLocation = () => {
               
             //     console.log(response.data)
       
-                  return response;
-                 } )
+                return response;
+            
+      } )
 }
+
+
+
