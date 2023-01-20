@@ -10,6 +10,13 @@ import { RegularButton } from './Button';
 
 import heart from '../images/heart.png'
 
+import car from '../images/car.png';
+import plane from '../images/plane.png';
+import packages from '../images/packages.png';
+import stays from '../images/stays.png';
+import train from '../images/train.png';
+import profile from '../images/profile.png'
+
 //  import { IoMdAirplane } from 'react-icons/fa'
 
 const StyledNavigation = styled(Stack)(({ theme }) => ({
@@ -17,31 +24,44 @@ const StyledNavigation = styled(Stack)(({ theme }) => ({
       width: '15vw',
       position: 'fixed',
       // backgroundColor: 'grey'
-      borderRight:'1px solid #d9e2e8',
+      borderRight: '1px solid #d9e2e8',
       height: "100vh",
-      gap: '1em',
+      gap: '.5em',
       justifyItems: 'center',
-      paddingTop:'10vh',
+      paddingTop: '10vh',
+      paddingLeft:".5em",
       [theme.breakpoints.down('md')]: {
 
             
       },
       [theme.breakpoints.down('sm')]: {
-            display:'none'
+            display: 'none'
       }
 
       
-}))
+}));
 
-
+const LinkStack = styled(Stack)(({ theme }) => ({
+      flexDirection: "row",
+      gap: "1em",
+      alignItems: "center",
+      borderRadius: "5px",
+      margin: "0 5px 0 0",
+      padding:".5em",
+      
+      '&:hover': {
+            backgroundColor: "rgba(217,226,232,0.6)",
+            cursor:"pointer",
+      }
+}));
 
 export const SideNavigation = () => {
 
       return (
 
             <StyledNavigation>
-                  <Box>
-                        {/* <Image src={MenuIcon}/> */}
+                  <LinkStack>
+                        <Image  src={profile} height={'20px'} width={'20px'}/>
 
                         <Link href='#'>
                               
@@ -49,12 +69,11 @@ export const SideNavigation = () => {
 
                         </Link>
 
-                  </Box>
+                  </LinkStack>
 
-                  <Stack>
+                 <LinkStack direction={'row'} gap={'1em'}>
                         
-                       
-                        {/* <Image width={50} color={red} height={50} src={ <IoMdAirplane/> }></Image> */}
+                       <Image src={plane} height={'20px'} width={'20px'}></Image>
                       
                         
                         <Link href='/flights' style={{cursor:'pointer'}}>
@@ -63,68 +82,79 @@ export const SideNavigation = () => {
 
                         </Link>
                         
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                 <LinkStack>
+                        
+                        <Image src={stays} height={'20px'} width={'20px'}></Image>
+                        
                         <Link href='/stays' style={{cursor:'pointer'}}>
                               
                        Stays
                               
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                  
+                 <LinkStack>
+                        
+                        
+                  <Image src={car} height={'20px'} width={'20px'}></Image>
                         <Link href='/car-rentals' style={{cursor:'pointer'}}>
                               
                        Cars
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                 <LinkStack>
+                        
+                  <Image src={packages} height={'20px'} width={'20px'}></Image>
                         <Link href='vacations' style={{cursor:'pointer'}}>
                               
                        Packages
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                 <LinkStack>
+                        
+                  <Image src={train} height={'20px'} width={'20px'}></Image>
                         <Link href='/transportations' style={{cursor:'pointer'}}>
                               
                        Trains and Buses
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                  <LinkStack>
                         Explore
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                  <LinkStack>
                         <Link href='#' style={{cursor:'pointer'}}>
                               
                         Flight Tracker
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                  <LinkStack>
                         <Link href='#' style={{cursor:'pointer'}}>
                               
                        Travels Restriction
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
-                  <Stack>
+                  <LinkStack>
                         <Link href='#' style={{cursor:'pointer'}}>
                               
                        Trips
 
                         </Link>
-                  </Stack>
+                  </LinkStack>
 
             </StyledNavigation>
             

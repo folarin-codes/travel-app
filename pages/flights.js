@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 // import { useQuery } from '@tanstack/react-query';
-
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 import { useStoreActions } from 'easy-peasy';
 
@@ -32,27 +32,27 @@ import search from '../images/search.svg';
 const Flights = () => {
 
 
-      const getUserLocation = useStoreActions((actions) => actions.addUserLocation);
+      // const getUserLocation = useStoreActions((actions) => actions.addUserLocation);
 
-      const userLocation = locationStore((state)=> state.getUserLocation)
+      // const userLocation = locationStore((state)=> state.getUserLocation)
 
 
-      const { data } = getLocation();
+      // const { data } = getLocation();
 
-      if (data) {
+      // if (data) {
 
-            //EASY-PEASY
+      //       //EASY-PEASY
 
-            getUserLocation([data.data.regionName, data.data.country]);
+      //       getUserLocation([data.data.regionName, data.data.country]);
 
-            //ZUSTAND
-            userLocation([data.data.regionName, data.data.country]);
+      //       //ZUSTAND
+      //       userLocation([data.data.regionName, data.data.country]);
 
             
-            console.log(data.data.regionName, data.data.country)
-      }
+      //       console.log(data.data.regionName, data.data.country)
+      // }
 
-
+      // const position = [51.505, -0.09]
 
       
 
@@ -65,6 +65,8 @@ const Flights = () => {
                         <Typography variant='h1' component={'h1'}>Where are you flying?</Typography>
 
                  </Box>
+
+            
 
                  <InputStack>
                   <StyledInput/>
@@ -108,7 +110,21 @@ const Flights = () => {
 
                               <RegularButton>See all</RegularButton>
 
+
                         </Stack>
+
+{/*                         
+                        <MapContainer center={position} style={{width:'100%', height:"5em"}} zoom={1} scrollWheelZoom={false}>
+                                    <TileLayer
+                                          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+                                    <Marker position={position}>
+                                          <Popup>
+                                          A pretty CSS3 popup. <br /> Easily customizable.
+                                          </Popup>
+                                    </Marker>
+                              </MapContainer> */}
 
                  </Stack>
 

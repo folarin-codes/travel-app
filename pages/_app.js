@@ -15,9 +15,6 @@ const queryClient = new QueryClient({});
 
 function MyApp({ Component, pageProps }) {
 
- 
-
-
   return (
 
     <StoreProvider store={store}>

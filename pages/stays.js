@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 
 import { useStoreState  } from 'easy-peasy';
 
 import Image from 'next/image'
 
-import { Stack, Box, Typography } from '@mui/material';
+import { Stack, Box, Typography , Divider} from '@mui/material';
 
 import styled from '@emotion/styled'
 
@@ -41,16 +41,29 @@ import hotel5 from '../images/hotel5.jpg';
 import hotel6 from '../images/hotel6.jpg';
 import hotel7 from '../images/hotel7.jpg';
 import hotel8 from '../images/hotel8.jpg';
+import calender from '../images/calender.svg';
+import bed from '../images/bed.svg';
+import profile from '../images/profile.svg';
 
 
 export const StyledInput = styled('input')({
       outline: 'none',
       border: 'none',
       backgroundColor: '#e5ebf0',
-      padding: '1em  2em',
+      padding: '1em  2em 1em 1em',
       borderRadius:'5px'
       
 })
+
+export const InputContainer = styled(Stack)({
+      backgroundColor: '#e5ebf0',
+      borderRadius: '5px',
+      flexDirection: "row",
+      gap: "0em",
+      padding:"0 1em"
+
+
+});
 
 export const MainStack = styled(Stack)(({ theme }) => ({
       // paddingLeft:'20vw'
@@ -72,7 +85,7 @@ export const InputStack = styled(Stack)(({ theme }) => ({
 
       display: 'flex',
       flexDirection: 'row',
-      // gap: '1em',
+      gap: '1em',
       justifyContent:'space-between'
       
 }))
@@ -88,19 +101,25 @@ const StaysContainer = styled(Stack)(({ theme }) => ({
 
 const Stays = () => {
 
-      const userLocationArr = useStoreState((state) => state.userLocation);
+      // useEffect(()=>{
+
+      //       const userLocationArr = useStoreState((state) => state.userLocation);
       
-      console.log( userLocationArr);
-
-      if (userLocationArr) {
+      //       console.log( userLocationArr);
+      
+      //       if (userLocationArr) {
+                  
+      //       console.log(userLocationArr);
+                  
+      //       };
             
-      console.log(userLocationArr);
-            
-      };
+      // }, [])
 
-      const locationArr = locationStore((state) => state.location);
+     
 
-      console.log(locationArr)
+      // const locationArr = locationStore((state) => state.location);
+
+      // console.log(locationArr)
 
       // const { data } = hotelsNearby('lagos,Nigeria');
 
@@ -128,10 +147,39 @@ const Stays = () => {
                   </Box>
 
                   <InputStack>
-                        <StyledInput placeholder='Enter a city, hotel or landmark' />
-                        <StyledInput/>
-                        <StyledInput/>
+                        
+                        <InputContainer sx={{width:"30vw"}}>
+                              
+                          <Image src={bed} height={'20px'} width={'20px'} />
+                              
+                        <StyledInput style={{width:"25vw"}} placeholder='Enter a city, hotel or landmark' />
+
+                        </InputContainer>
+
+
+                        <InputContainer >
+                             
+                              <Image src={ calender} width={20} height={20}  />
+                                    <StyledInput style={{ width: "10vw" }} />
+                           
+                              
+                              <Divider orientation="vertical" sx={{ height: "25px", display: "flex", margin: "auto 10px" }} />
+
+                             
+                              <Image src={calender} width={'20px'} height={'20px'} />
+                              <StyledInput  style={{width:"10vw"}} />
+                             
+                              
+                        </InputContainer> 
+
+                        {/* <InputContainer> */}
+                              {/* <Image src={profile} width={20} height={20} /> */}
+                              
                         <StyledInput />
+
+                        {/* </InputContainer> */}
+                        
+                        
 
                         <SearchBox>
                               
@@ -140,6 +188,14 @@ const Stays = () => {
                         </SearchBox>
 
                   </InputStack>
+
+                  {/* {
+                        userLocationArr.map((item) => {
+                              return (
+                                    <h1>{item}</h1>
+                              )
+                        })
+                  } */}
 
 
                   <Box>
