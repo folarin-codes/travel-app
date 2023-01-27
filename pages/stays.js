@@ -45,6 +45,15 @@ import calender from '../images/calender.svg';
 import bed from '../images/bed.svg';
 import profile from '../images/profile.svg';
 
+import chicago from '../images/chicago.jpg';
+import london from '../images/london.jpg'
+import mexico from '../images/mexico.jpg'
+import miami from '../images/miami.jpg'
+import newyork from '../images/newyork.jpg'
+import orlando from '../images/orlando.jpg'
+import vagas from '../images/vagas.jpg'
+import honolulu from '../images/honolulu.jpg'
+
 
 export const StyledInput = styled('input')({
       outline: 'none',
@@ -98,6 +107,15 @@ const StaysContainer = styled(Stack)(({ theme }) => ({
       
 }))
 
+const HotelContainer = styled(Stack)(({ }) => ({
+      flexDirection: "row",
+      gap: "1em",
+      justifyContent: "space-between",
+      flexWrap:"wrap"
+      
+      
+}))
+
 
 const Stays = () => {
 
@@ -130,7 +148,7 @@ const Stays = () => {
       const sliderSettings = {
             dots: false,
             infinite: false,
-            slidesToShow: 4,
+            // slidesToShow: 4,
             slidesToScroll: 1,
             nextArrow: <NextArrow />,
             prevArrow: <PrevArrow />
@@ -202,7 +220,7 @@ const Stays = () => {
                         <Image src={hero} height={1000} placeholder='blur' loading='lazy' style={{borderRadius:'10px'}} />
                   </Box>
 
-                  <Stack>
+                  <Stack gap={'1em'}>
                         <Stack direction={'row'} sx={{ justifyContent: 'space-between'}}>
                               <Box>
                                     <Typography component={'h2'} variant='h2'>Stays in Lagos</Typography>
@@ -214,7 +232,7 @@ const Stays = () => {
 
                         {/* <StaysContainer> */}
                               
-                              <Slider {...sliderSettings}>
+                              <Slider {...sliderSettings} slidesToShow='4'>
 
                               <Box>
                                     <Image src={hotel1} height="250px" width='250px' style={{borderRadius:"10px"}}/>
@@ -260,7 +278,76 @@ const Stays = () => {
                   </MainStack>
 
 
-                  <Subscribe/>
+                  <Subscribe />
+                  
+                  <Stack gap={'1em'}>
+                        
+                        <Typography component={'h3'} variant='h3'>Top 8 popular cities</Typography>
+
+                        <Slider  {...sliderSettings} slidesToShow={2} style={{gap:'1em'}}  >
+                              <Stack >
+                                    
+                                    <Image src={vagas} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+
+                                    <Typography component={'h4'} variant={'h4'}>Las Vagas , NV</Typography>
+                                    <Typography>Starts from $79+</Typography>
+                                    
+                              </Stack>
+
+                              <Stack>
+                                    <Image src={mexico} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}> Cancún, Quintana Roo, Mexico</Typography>
+                                    <Typography>Stays from $146+</Typography>
+                              </Stack>
+
+                              <Stack>
+                                    <Image src={miami} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}> Miami , FL</Typography>
+                                    <Typography>Stays from $146+</Typography>
+                                    
+                              </Stack>
+
+                              <Stack>
+                                    <Image src={honolulu} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}>Honolulu, O'ahu, HI</Typography>
+                                    <Typography>Stays from $146+</Typography>                       
+
+                              </Stack>
+
+                              <Stack>
+                                    <Image src={orlando} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}>Orlando, FL</Typography>
+                                    <Typography>Stays from $71+</Typography>
+                              </Stack>
+                              
+                              <Stack>
+                                    <Image src={newyork} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}>New York, NY</Typography>
+                                    <Typography>Stays from $89+</Typography>
+                              </Stack>
+                              
+                              <Stack>
+                                    <Image src={london} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}>London , England, United Kingdom</Typography>
+                                    <Typography>Stays from $146+</Typography>
+                              </Stack>
+                              
+                              <Stack>
+                                    <Image src={chicago} height="350px" width='500px' style={{ borderRadius: "5px" }} />
+                                    
+                                    <Typography component={'h4'} variant={'h4'}>Chicago, IL</Typography>
+                                    <Typography>Stays from $35+</Typography>
+                              </Stack>
+
+                        </Slider>
+                        
+                  </Stack>
                   
             </Container>
             

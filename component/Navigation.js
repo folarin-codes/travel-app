@@ -16,6 +16,9 @@ import packages from '../images/packages.png';
 import stays from '../images/stays.png';
 import train from '../images/train.png';
 import profile from '../images/profile.png'
+import globe from '../images/globe2.png'
+import shield from '../images/shield.png'
+import log from '../images/log.png'
 
 //  import { IoMdAirplane } from 'react-icons/fa'
 
@@ -26,10 +29,11 @@ const StyledNavigation = styled(Stack)(({ theme }) => ({
       // backgroundColor: 'grey'
       borderRight: '1px solid #d9e2e8',
       height: "100vh",
-      gap: '.5em',
+      gap: '1em',
       justifyItems: 'center',
       paddingTop: '10vh',
-      paddingLeft:".5em",
+      paddingLeft: ".5em",
+      paddingRight:".5em",
       [theme.breakpoints.down('md')]: {
 
             
@@ -63,20 +67,21 @@ export const SideNavigation = () => {
                   <LinkStack>
                         <Image  src={profile} height={'20px'} width={'20px'}/>
 
-                        <Link href='#'>
+                        <Link underline={'hover'} href='#'>
                               
                              Sign in
 
                         </Link>
 
                   </LinkStack>
+                  <Divider orientation={ 'horizontal'} />
 
                  <LinkStack direction={'row'} gap={'1em'}>
                         
                        <Image src={plane} height={'20px'} width={'20px'}></Image>
                       
                         
-                        <Link href='/flights' style={{cursor:'pointer'}}>
+                        <Link href='/flights' underline={'hover'} style={{cursor:'pointer'}}>
                               
                         Flights
 
@@ -88,7 +93,7 @@ export const SideNavigation = () => {
                         
                         <Image src={stays} height={'20px'} width={'20px'}></Image>
                         
-                        <Link href='/stays' style={{cursor:'pointer'}}>
+                        <Link href='/stays' underline={'hover'} style={{cursor:'pointer'}}>
                               
                        Stays
                               
@@ -101,7 +106,7 @@ export const SideNavigation = () => {
                         
                         
                   <Image src={car} height={'20px'} width={'20px'}></Image>
-                        <Link href='/car-rentals' style={{cursor:'pointer'}}>
+                        <Link href='/car-rentals' underline={'hover'} style={{cursor:'pointer'}}>
                               
                        Cars
 
@@ -111,7 +116,7 @@ export const SideNavigation = () => {
                  <LinkStack>
                         
                   <Image src={packages} height={'20px'} width={'20px'}></Image>
-                        <Link href='vacations' style={{cursor:'pointer'}}>
+                        <Link href='vacations' underline={'hover'} style={{cursor:'pointer'}}>
                               
                        Packages
 
@@ -121,37 +126,50 @@ export const SideNavigation = () => {
                  <LinkStack>
                         
                   <Image src={train} height={'20px'} width={'20px'}></Image>
-                        <Link href='/transportations' style={{cursor:'pointer'}}>
+                        <Link href='/transportations' underline={'hover'} style={{cursor:'pointer'}}>
                               
                        Trains and Buses
 
                         </Link>
                   </LinkStack>
 
-                  <LinkStack>
-                        Explore
-                  </LinkStack>
+                  
+                  <Divider orientation={ 'horizontal'} />
 
                   <LinkStack>
+                  <Image src={globe} height={'20px'} width={'20px'}></Image>
+                        <Link href='#' underline={'hover'} style={{cursor:'pointer'}}>
+                              
+                      Explore
+
+                        </Link>
+                  </LinkStack>
+
+                  {/* <LinkStack>
                         <Link href='#' style={{cursor:'pointer'}}>
                               
                         Flight Tracker
 
                         </Link>
-                  </LinkStack>
+                  </LinkStack> */}
 
                   <LinkStack>
-                        <Link href='#' style={{cursor:'pointer'}}>
+                  <Image src={shield} height={'20px'} width={'20px'}></Image>
+                        <Link href='#' underline={'hover'} style={{cursor:'pointer'}}>
                               
-                       Travels Restriction
+                      Travel Restrictions
 
                         </Link>
                   </LinkStack>
 
+                  
+                  <Divider orientation={ 'horizontal'} />
+
                   <LinkStack>
-                        <Link href='#' style={{cursor:'pointer'}}>
+                  <Image src={log} height={'20px'} width={'20px'}></Image>
+                        <Link href='#' underline={'hover'} style={{cursor:'pointer'}}>
                               
-                       Trips
+                      Trips
 
                         </Link>
                   </LinkStack>
