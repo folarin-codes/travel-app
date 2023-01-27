@@ -11,6 +11,9 @@ import styled from '@emotion/styled'
 import Slider from 'react-slick';
 
 
+import DatePicker from 'react-date-picker/dist/entry.nostyle';
+
+
 import { getLocation } from '../hooks/userLocation';
 
 import { hotelsNearby } from '../hooks/hoteslNearby';
@@ -170,7 +173,7 @@ const Stays = () => {
                               
                           <Image src={bed} height={'20px'} width={'20px'} />
                               
-                        <StyledInput style={{width:"25vw"}} placeholder='Enter a city, hotel or landmark' />
+                        <StyledInput style={{width:"25vw"}} placeholder='Enter a city, hotel , airport, address or landmark' />
 
                         </InputContainer>
 
@@ -178,22 +181,27 @@ const Stays = () => {
                         <InputContainer >
                              
                               <Image src={ calender} width={20} height={20}  />
-                                    <StyledInput style={{ width: "10vw" }} />
+                              {/* <StyledInput style={{ width: "10vw" }} /> */}
+                              <DatePicker  />
                            
                               
                               <Divider orientation="vertical" sx={{ height: "25px", display: "flex", margin: "auto 10px" }} />
 
                              
                               <Image src={calender} width={'20px'} height={'20px'} />
-                              <StyledInput  style={{width:"10vw"}} />
+                              {/* <StyledInput  style={{width:"10vw"}} /> */}
+                              <DatePicker  />
                              
                               
                         </InputContainer> 
+                        
+      {/* <DatePicker  /> */}
 
-                        {/* <InputContainer> */}
-                              {/* <Image src={profile} width={20} height={20} /> */}
+                        {/* <InputContainer sx={{postioning:"relative"}}> */}
                               
-                        <StyledInput />
+                              {/* <Image src={profile} width={20} height={20}  /> */}
+                              
+                              <StyledInput sx={{position:"relative"}} />
 
                         {/* </InputContainer> */}
                         
@@ -285,7 +293,7 @@ const Stays = () => {
                         <Typography component={'h3'} variant='h3'>Top 8 popular cities</Typography>
 
                         <Slider  {...sliderSettings} slidesToShow={2} style={{gap:'1em'}}  >
-                              <Stack >
+                              <Stack>
                                     
                                     <Image src={vagas} height="350px" width='500px' style={{ borderRadius: "5px" }} />
 
