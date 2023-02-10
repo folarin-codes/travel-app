@@ -10,7 +10,6 @@ export const Container = styled(Stack)(({ theme }) => ({
       paddingRight:'5vw',
       gap: '2em',
       paddingTop: "7em",
+      paddingBottom:'3em'
      
-
-
 }))

@@ -68,7 +68,8 @@ const Flights = () => {
 
             
 
-                 <InputStack>
+                  <InputStack>
+                        
                   <StyledInput/>
 
                   <Stack sx={{backgroundColor:"#e5ebf0" , borderRadius:'5px' , width:'50px'}}>
@@ -77,7 +78,7 @@ const Flights = () => {
                   <Box sx={{justifyItems:'center' , justifySelf:'center'}}>
 
                
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="c-P_--icon c-P_--mod-responsive" role="img" cleanup=""><path d="M56.238 154.801c-25.271-30.326-30.335-33.201-25-39.603l25-30l11.523 9.603L53.013 112.5H120v15H53.013l14.749 17.699l-11.524 9.602zm86.524-40l-11.523-9.603L145.987 87.5H80v-15h65.987l-14.749-17.699l11.523-9.603l25 30c5.335 6.403.272 9.278-24.999 39.603z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="c-P_--icon c-P_--mod-responsive" role="img" cleanup=""><path d="M56.238 154.801c-25.271-30.326-30.335-33.201-25-39.603l25-30l11.523 9.603L53.013 112.5H120v15H53.013l14.749 17.699l-11.524 9.602zm86.524-40l-11.523-9.603L145.987 87.5H80v-15h65.987l-14.749-17.699l11.523-9.603l25 30c5.335 6.403.272 9.278-24.999 39.603z"></path></svg>
                   </Box>
 
                   <Box>

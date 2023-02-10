@@ -1,20 +1,26 @@
-import axios from "axios";
+ import axios from "axios";
 
-import { useStoreActions } from 'easy-peasy';
+// import { useStoreActions } from 'easy-peasy';
 
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 
-export const getLocation = () => {
+// export const getLocation = () => {
 
-      return useQuery(['location'] ,  async () => {
-               const response = await axios.get("http://ip-api.com/json")
+//       return useQuery(['location'] ,  async () => {
+//                const response = await axios.get("http://ip-api.com/json")
               
-            //     console.log(response.data)
+//             //     console.log(response.data)
       
-                return response;
+//                 return response;
             
-      } )
-}
+//       } )
+// }
 
 
+// export const fetcher =  () => {
+
+//        fetch("http://ip-api.com/json").then(res => res.json())
+      
+      
+// }
 

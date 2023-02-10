@@ -14,7 +14,7 @@ import Slider from 'react-slick';
 import DatePicker from 'react-date-picker/dist/entry.nostyle';
 
 
-import { getLocation } from '../hooks/userLocation';
+import  getLocation from '../requests/location.request';
 
 import { hotelsNearby } from '../hooks/hoteslNearby';
 
@@ -122,6 +122,13 @@ const HotelContainer = styled(Stack)(({ }) => ({
 
 const Stays = () => {
 
+      
+      const { location, isLoading, isError } = getLocation();
+            
+      console.log(location)
+            
+      
+
       // useEffect(()=>{
 
       //       const userLocationArr = useStoreState((state) => state.userLocation);
@@ -195,7 +202,7 @@ const Stays = () => {
                               
                         </InputContainer> 
                         
-      {/* <DatePicker  /> */}
+      
 
                         {/* <InputContainer sx={{postioning:"relative"}}> */}
                               
@@ -297,8 +304,8 @@ const Stays = () => {
                                     
                                     <Image src={vagas} height="350px" width='500px' style={{ borderRadius: "5px" }} />
 
-                                    <Typography component={'h4'} variant={'h4'}>Las Vagas , NV</Typography>
-                                    <Typography>Starts from $79+</Typography>
+                                    <Typography component={'h4'}  variant={'h4'}>Las Vagas , NV</Typography>
+                                    <Typography >Starts from $79+</Typography>
                                     
                               </Stack>
 
